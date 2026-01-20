@@ -324,11 +324,12 @@ void handle_wifi_tcp_requests() {
     Web_server_client.println(F("<br><br>==SW Info=="));
     Web_server_client.print(F("<br>AppVersion : "));
     Web_server_client.println(String(FPSTR(Version_String)));
-    Web_server_client.print(F("<br>Arduino IdeVersion : ") + String(ARDUINO, DEC));
-    Web_server_client.print(F("<br>Arduino C++ Compiler : ") + String(__cplusplus));
+    Web_server_client.println(F("<br>Source file : ") + String(__FILE__));
+    Web_server_client.println(F("<br>Arduino IdeVersion : ") + String(ARDUINO, DEC));
+    Web_server_client.println(F("<br>Arduino C++ Compiler : ") + String(__cplusplus));
     Web_server_client.print(F("<br>ESP "));
     Web_server_client.println(ESP.getFullVersion());
-    Web_server_client.print(F("<br>Compiled : "__DATE__
+    Web_server_client.println(F("<br>Compiled : "__DATE__
                               ", "__TIME__
                               ", "__VERSION__));
     Web_server_client.print(F("<br>SketchSize : "));
